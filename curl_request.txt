@@ -1,0 +1,22 @@
+For Save API:
+curl --location 'http://127.0.0.1:8080/api/v1/product/save' \
+--header 'Content-Type: application/json' \
+--data '{
+    "productList": {
+        "shopperId": "S1",
+        "shelf": [
+            {
+                "productId": "12",
+                "relavancyScore": "100"
+            }
+        ]
+    },
+    "metaData": {
+        "productId": "12",
+        "category": "toys",
+        "brand": "mumma earth"
+    }
+}'
+
+For Retrieve API:
+curl --location 'http://127.0.0.1:8080/api/v1/product/retrieve?shopperId=S1'
